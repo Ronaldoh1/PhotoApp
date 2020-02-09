@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "2.7.1",
+  "iOS" : [
+    {
+      "name" : "SwipeCellKit",
+      "hash" : "7886493a35a494deffd76c861933fff65d0c09198d8dca17bfbc9b96f46982ee",
+      "swiftToolchainVersion" : "5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+    }
+  ]
+}

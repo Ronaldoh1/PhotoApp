@@ -1,0 +1,14 @@
+#Constraints
+github "SnapKit/SnapKit" ~> 5.0.0
+
+
+#Networking
+github "Alamofire/Alamofire" 
+
+#Reactive programming
+github "ReactiveX/RxSwift" 
+github "RxSwiftCommunity/RxDataSources" 
+github "RxSwiftCommunity/RxSwiftExt"
+
+#UI 
+github "SwipeCellKit/SwipeCellKit"
