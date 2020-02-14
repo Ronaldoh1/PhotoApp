@@ -27,6 +27,7 @@
 		FA6556BF23F0C04B00C57E22 /* RxSwiftExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA6556B223F0C04A00C57E22 /* RxSwiftExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA6556C023F0C04B00C57E22 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6556B323F0C04B00C57E22 /* SnapKit.framework */; };
 		FA6556C123F0C04B00C57E22 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA6556B323F0C04B00C57E22 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAAC5E2F23F71B7400AF5BFF /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC5E2E23F71B7400AF5BFF /* PhotoCollectionViewCell.swift */; };
 		FAF6667023F1605F00EB5663 /* PhotoSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6666F23F1605E00EB5663 /* PhotoSelectionViewController.swift */; };
 		FAF6667223F1606E00EB5663 /* ApplyFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6667123F1606E00EB5663 /* ApplyFiltersViewController.swift */; };
 		FAF6667423F1610D00EB5663 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF6667323F1610D00EB5663 /* SceneDelegate.swift */; };
@@ -89,6 +90,7 @@
 		FA6556B123F0C04A00C57E22 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FA6556B223F0C04A00C57E22 /* RxSwiftExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwiftExt.framework; path = Carthage/Build/iOS/RxSwiftExt.framework; sourceTree = "<group>"; };
 		FA6556B323F0C04B00C57E22 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		FAAC5E2E23F71B7400AF5BFF /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAF6666F23F1605E00EB5663 /* PhotoSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectionViewController.swift; sourceTree = "<group>"; };
 		FAF6667123F1606E00EB5663 /* ApplyFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyFiltersViewController.swift; sourceTree = "<group>"; };
 		FAF6667323F1610D00EB5663 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				FA65568623F0973100C57E22 /* LaunchScreen.storyboard */,
 				FA65568923F0973100C57E22 /* Info.plist */,
 				FAF6667123F1606E00EB5663 /* ApplyFiltersViewController.swift */,
+				FAAC5E2E23F71B7400AF5BFF /* PhotoCollectionViewCell.swift */,
 			);
 			path = PhotoApp;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF6667223F1606E00EB5663 /* ApplyFiltersViewController.swift in Sources */,
+				FAAC5E2F23F71B7400AF5BFF /* PhotoCollectionViewCell.swift in Sources */,
 				FAF6667023F1605F00EB5663 /* PhotoSelectionViewController.swift in Sources */,
 				FA65567C23F0972B00C57E22 /* AppDelegate.swift in Sources */,
 				FAF6667423F1610D00EB5663 /* SceneDelegate.swift in Sources */,
