@@ -29,7 +29,10 @@ class PhotoSelectionViewController: UICollectionViewController {
                     self?.images.append(object)
                 }
                 self?.images.reverse() // need to add the images in reverse order because of the order they were added in.
-                print(self?.images)
+                
+                DispatchQueue.main.sync {
+                    self?.collectionView.reloadData()
+                }
             }
         }
     }
@@ -48,5 +51,17 @@ extension PhotoSelectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell else  {
+            return UICollectionViewCell()
+        }
+        let asset = self.images[indexPath.row]
+        
+        let manager = PHImageManager.default()
+        manager.requestImage(for: asset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: nil) { (image, _) in
+            DispatchQueue.main.async {
+                cell.photoImage.image = image
+            }
+        }
+        return cell
     }
 }
