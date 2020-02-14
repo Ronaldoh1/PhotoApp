@@ -8,8 +8,15 @@
 
 import Foundation
 import UIKit
+import RxSwift
 
 class ApplyFiltersViewController: UIViewController {
+    
+    @IBOutlet weak var applyFiltersButton: UIButton!
+    
+    @IBOutlet weak var photoSelected: UIImageView!
+    
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,4 +24,25 @@ class ApplyFiltersViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
 
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let navController = segue.destination as? UINavigationController, let photoVC = navController.viewControllers.first as? PhotoSelectionViewController else {
+            fatalError()
+        }
+        
+        photoVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
+            
+            self?.updateUI(with: photo)
+        
+        }).disposed(by: disposeBag)
+    }
+    
+    private func updateUI(with image: UIImage) {
+        
+        self.photoSelected.image = image
+        self.applyFiltersButton.isHidden = false
+    }
+    
 }

@@ -16,26 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cPK-S0-xRL">
-                                <rect key="frame" x="0.0" y="88" width="422" height="593"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4i-3o-blK">
-                                <rect key="frame" x="168" y="790" width="112" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4i-3o-blK">
+                                <rect key="frame" x="168" y="790" width="78" height="30"/>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Apply Filter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cPK-S0-xRL">
+                                <rect key="frame" x="44" y="235" width="331" height="387"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="E4i-3o-blK" firstAttribute="top" secondItem="cPK-S0-xRL" secondAttribute="bottom" constant="109" id="7vN-va-UOf"/>
-                            <constraint firstItem="cPK-S0-xRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bin-C0-apX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cPK-S0-xRL" secondAttribute="bottom" constant="181" id="KVW-ML-TTK"/>
-                            <constraint firstItem="cPK-S0-xRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NrI-d4-mGt"/>
-                            <constraint firstItem="cPK-S0-xRL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XIH-8v-aB0"/>
+                            <constraint firstItem="E4i-3o-blK" firstAttribute="top" secondItem="cPK-S0-xRL" secondAttribute="bottom" constant="168" id="7vN-va-UOf"/>
+                            <constraint firstItem="cPK-S0-xRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="Bin-C0-apX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cPK-S0-xRL" secondAttribute="bottom" constant="240" id="KVW-ML-TTK"/>
+                            <constraint firstItem="cPK-S0-xRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="NrI-d4-mGt"/>
+                            <constraint firstItem="cPK-S0-xRL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="147" id="XIH-8v-aB0"/>
                             <constraint firstItem="E4i-3o-blK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YCX-Qb-RSo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPK-S0-xRL" secondAttribute="trailing" constant="-8" id="ey9-ta-Khy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cPK-S0-xRL" secondAttribute="trailing" constant="39" id="ey9-ta-Khy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,6 +46,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="applyFiltersButton" destination="E4i-3o-blK" id="rQd-9Y-LJy"/>
+                        <outlet property="photoSelected" destination="cPK-S0-xRL" id="CWu-jU-i20"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

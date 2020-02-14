@@ -58,7 +58,7 @@ extension PhotoSelectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selectedAssset = self.images[indexPath.row]
-        PHImageManager.default().requestImage(for: selectedAssset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: nil) { [weak self](image, info) in
+        PHImageManager.default().requestImage(for: selectedAssset, targetSize: CGSize(width: 1000, height: 1000), contentMode: .aspectFit, options: nil) { [weak self](image, info) in
             guard let info = info else { return }
             let isDegradedIamge = info["PHImageResultIsDegradedKey"] as! Bool
             
