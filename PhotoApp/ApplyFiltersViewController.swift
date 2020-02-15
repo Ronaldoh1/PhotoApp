@@ -45,4 +45,16 @@ class ApplyFiltersViewController: UIViewController {
         self.applyFiltersButton.isHidden = false
     }
     
+    @IBAction func applyFilter(_ sender: Any) {
+        guard let sourceImage = self.photoSelected.image else {
+            return
+        }
+        
+        FilterService().applyFilter(to: sourceImage) { filteredImage in
+            DispatchQueue.main.async {
+                self.photoSelected.image = filteredImage
+            }
+        }
+    }
+    
 }
