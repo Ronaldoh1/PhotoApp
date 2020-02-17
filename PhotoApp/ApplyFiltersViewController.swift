@@ -23,6 +23,8 @@ class ApplyFiltersViewController: UIViewController {
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
 
+        
+        
     }
     
     
@@ -50,11 +52,12 @@ class ApplyFiltersViewController: UIViewController {
             return
         }
         
-        FilterService().applyFilter(to: sourceImage) { filteredImage in
-            DispatchQueue.main.async {
-                self.photoSelected.image = filteredImage
-            }
-        }
+        FilterService().applyFilter(to: sourceImage)
+            .subscribe(onNext: { filteredImage in
+                DispatchQueue.main.async {
+                    self.photoSelected.image = filteredImage
+                }
+            }).disposed(by: disposeBag)
     }
     
 }
